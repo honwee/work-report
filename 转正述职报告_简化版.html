@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陈弘唯 - 述职报告</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 加载动画 -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- 动画背景 -->
+    <div class="bg-animation"></div>
+    <div class="bg-grid"></div>
+    <div class="floating-particles" id="particles"></div>
+
+    <!-- 幻灯片1: 标题页 -->
+    <div class="slide active" id="slide0">
+        <div class="title-slide">
+            <div class="title-content">
+                <h1>述职报告</h1>
+                <div class="company-info">总经办 · 技术中心</div>
+                <div class="title-info-grid" id="titleInfoGrid">
+                    <div class="title-info-item name-card" id="nameCard" onclick="expandDateCards()">
+                        <div class="label">汇报人</div>
+                        <div class="value">陈弘唯</div>
+                    </div>
+                    <div class="title-info-item date-card" id="startDateCard">
+                        <div class="label">入职时间</div>
+                        <div class="value">2025.06.25</div>
+                    </div>
+                    <div class="title-info-item date-card" id="endDateCard">
+                        <div class="label">直属上级</div>
+                        <div class="value">Mingkai总</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 幻灯片2: 基本信息概览 -->
+    <div class="slide" id="slide1">
+        <div class="container">
+            <h2 class="page-title">在职期间工作概览</h2>
+            
+            <div class="enhanced-stats-grid">
+                <div class="enhanced-stat-card">
+                    <div class="icon">📅</div>
+                    <div class="number">3</div>
+                    <div class="label">个月在职期</div>
+                    <div class="description">高效完成各项工作目标与任务</div>
+                </div>
+                <div class="enhanced-stat-card">
+                    <div class="icon">👥</div>
+                    <div class="number">2</div>
+                    <div class="label">团队成员</div>
+                    <div class="description">组建精干高效的AI研发小组</div>
+                </div>
+                <div class="enhanced-stat-card">
+                    <div class="icon">🚀</div>
+                    <div class="number">5</div>
+                    <div class="label">AI项目</div>
+                    <div class="description">自研AI全栈业务的项目</div>
+                </div>
+                <div class="enhanced-stat-card">
+                    <div class="icon">🤝</div>
+                    <div class="number">4</div>
+                    <div class="label">协作部门</div>
+                    <div class="description">跨部门深度合作</div>
+                </div>
+                <div class="enhanced-stat-card">
+                    <div class="icon">🎯</div>
+                    <div class="number">35+</div>
+                    <div class="label">简历筛选和面试</div>
+                    <div class="description">严格筛选优秀技术人才</div>
+                </div>
+                <div class="enhanced-stat-card">
+                    <div class="icon">✅</div>
+                    <div class="number">626</div>
+                    <div class="label">节课程验证</div>
+                    <div class="description">摸清解决了Rubric描述与人机对齐问题，找出大模型在理解复杂规则时的局限性</div>
+                </div>
+                <div class="enhanced-stat-card">
+                    <div class="icon">📚</div>
+                    <div class="number">10+</div>
+                    <div class="label">次培训学习</div>
+                    <div class="description">包含2次外部培训，持续提升自身能力</div>
+                </div>
+                <div class="enhanced-stat-card">
+                    <div class="icon">🏆</div>
+                    <div class="number">1</div>
+                    <div class="label">最佳小组奖</div>
+                    <div class="description">混沌学院培训中团队协作获得认可</div>
+                </div>
+            </div>
+
+            <div class="collaboration-grid">
+                <div class="collaboration-card">
+                    <div class="collaboration-header">
+                        <div class="collaboration-icon">🎯</div>
+                        <div class="collaboration-title">核心职责</div>
+                    </div>
+                    <ul class="department-list">
+                        <li>
+                            <span class="dept-name">团队管理</span>
+                            <span class="dept-project">AI研发团队的技术指导与项目协调</span>
+                        </li>
+                        <li>
+                            <span class="dept-name">人才招聘</span>
+                            <span class="dept-project">35+面试，组建 AI 研发团队</span>
+                        </li>
+                        <li>
+                            <span class="dept-name">技术研发</span>
+                            <span class="dept-project">业务需求分析、AI架构优化、技术选型、算法设计</span>
+                        </li>
+                        <li>
+                            <span class="dept-name">项目推进</span>
+                            <span class="dept-project">跨部门协作、进度把控、质量保证</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="collaboration-card">
+                    <div class="collaboration-header">
+                        <div class="collaboration-icon">🏢</div>
+                        <div class="collaboration-title">业务领域</div>
+                    </div>
+                    <ul class="department-list">
+                        <li>
+                            <span class="dept-name">课程分析</span>
+                            <span class="dept-project">AI驱动的智能课程评估与反馈系统</span>
+                        </li>
+                        <li>
+                            <span class="dept-name">需求匹配</span>
+                            <span class="dept-project">师生智能匹配与个性化推荐</span>
+                        </li>
+                        <li>
+                            <span class="dept-name">语音转录</span>
+                            <span class="dept-project">高精度ASR技术与成本优化</span>
+                        </li>
+                        <li>
+                            <span class="dept-name">品控管理</span>
+                            <span class="dept-project">课程质量智能化监控体系</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 幻灯片3: 项目时间轴详解 -->
+    <div class="slide" id="slide2">
+        <div class="container">
+            <h2 class="page-title">项目时间轴详解</h2>
+            
+            <!-- 横向时间轴概览 -->
+            <div class="timeline-overview" id="timelineOverview">
+                <div class="timeline-header">
+                    <div class="timeline-title">5个AI项目进度概览</div>
+              
+                </div>
+                
+                <div class="horizontal-timeline">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="timeline-project" onclick="showProjectDetail('course-analysis')" data-project="course-analysis">
+                        <div class="project-dot">
+                            <div class="project-icon">📊</div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-name">课程品控分析</div>
+                            <div class="project-period">7月-9月</div>
+                            <div class="project-status completed">已完成</div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-project" onclick="showProjectDetail('requirement-analysis')" data-project="requirement-analysis">
+                        <div class="project-dot">
+                            <div class="project-icon">🤖</div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-name">需求分析匹配</div>
+                            <div class="project-period">7月-9月</div>
+                            <div class="project-status completed">已完成</div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-project" onclick="showProjectDetail('report-feedback')" data-project="report-feedback">
+                        <div class="project-dot">
+                            <div class="project-icon">📋</div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-name">课程反馈系统</div>
+                            <div class="project-period">8月-9月</div>
+                            <div class="project-status completed">已完成</div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-project" onclick="showProjectDetail('asr-system')" data-project="asr-system">
+                        <div class="project-dot">
+                            <div class="project-icon">🎙️</div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-name">ASR转录系统</div>
+                            <div class="project-period">9月</div>
+                            <div class="project-status completed">已完成</div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-project" onclick="showProjectDetail('intelligent-matching')" data-project="intelligent-matching">
+                        <div class="project-dot">
+                            <div class="project-icon">🧠</div>
+                        </div>
+                        <div class="project-info">
+                            <div class="project-name">智能匹配优化</div>
+                            <div class="project-period">9月</div>
+                            <div class="project-status in-progress">进行中</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 项目详情视图 -->
+            <div class="timeline-detail-view" id="timelineDetailView">
+                <div class="detail-header">
+                    <button class="back-button" onclick="backToOverview()">
+                        <span>←</span> 返回概览
+                    </button>
+                    <div class="detail-title" id="detailTitle"></div>
+                </div>
+                
+                <div class="detail-content" id="detailContent">
+                    <!-- 详细内容将通过JavaScript动态加载 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 幻灯片4: 经验总结与方法论 -->
+    <div class="slide" id="slide3">
+        <div class="container">
+            <h2 class="page-title">经验总结与方法论</h2>
+            
+            <div class="methodology-grid">
+                <div class="methodology-card">
+                    <div class="methodology-header">
+                        <div class="methodology-icon">🎯</div>
+                        <div class="methodology-title">项目管理</div>
+                    </div>
+                    <div class="methodology-content">
+                        <div class="experience-item">
+                            <div class="experience-label">项目统筹策略</div>
+                            <div class="experience-desc">建立多角色协作机制，通过定期跨部门沟通会确保项目进度，制定明确的里程碑和交付标准</div>
+                        </div>
+                        <div class="experience-item">
+                            <div class="experience-label">风险预判机制</div>
+                            <div class="experience-desc">针对外包团队不可控因素，提前做好预期管理，建立技术自研方案，确保项目交付</div>
+                        </div>
+                        <div class="experience-item">
+                            <div class="experience-label">质量控制体系</div>
+                            <div class="experience-desc">通过626节课程的4轮验证，建立了系统化的AI品控测试流程和标准</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="methodology-card">
+                    <div class="methodology-header">
+                        <div class="methodology-icon">🤝</div>
+                        <div class="methodology-title">人机协作模式探索</div>
+                    </div>
+                    <div class="methodology-content">
+                        <div class="experience-item">
+                            <div class="experience-label">Rubric对齐方法</div>
+                            <div class="experience-desc">分析评估标准描述与AI理解的对齐问题，建立人工评估与AI评估的一致性标准</div>
+                        </div>
+                        <div class="experience-item">
+                            <div class="experience-label">模型局限性管理</div>
+                            <div class="experience-desc">深入分析大模型在复杂规则理解时的边界，建立可靠性评估机制和补偿策略</div>
+                        </div>
+                        <div class="experience-item">
+                            <div class="experience-label">智能辅助流程</div>
+                            <div class="experience-desc">设计AI辅助人工决策的最佳工作流，在保证质量的前提下最大化效率提升</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="methodology-card">
+                    <div class="methodology-header">
+                        <div class="methodology-icon">💰</div>
+                        <div class="methodology-title">成本控制与技术选型</div>
+                    </div>
+                    <div class="methodology-content">
+                        <div class="experience-item">
+                            <div class="experience-label">供应商谈判策略</div>
+                            <div class="experience-desc">通过对比测试多个平台，掌握商务谈判技巧，成功将ASR成本从1.5元降至0.5元</div>
+                        </div>
+                        <div class="experience-item">
+                            <div class="experience-label">技术自研决策</div>
+                            <div class="experience-desc">建立自主技术链路，摆脱外部依赖，确保长期成本可控和技术安全</div>
+                        </div>
+                        <div class="experience-item">
+                            <div class="experience-label">ROI评估模型</div>
+                            <div class="experience-desc">建立精确的成本核算体系，为每个技术决策提供量化的投资回报分析</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="methodology-card">
+                    <div class="methodology-header">
+                        <div class="methodology-icon">👥</div>
+                        <div class="methodology-title">团队建设与协作经验</div>
+                    </div>
+                    <div class="methodology-content">
+                        <div class="experience-item">
+                            <div class="experience-label">人才筛选标准</div>
+                            <div class="experience-desc">参与35+面试，建立技术能力、思维模式、团队协作的综合评估体系</div>
+                        </div>
+                        <div class="experience-item">
+                            <div class="experience-label">跨部门协作</div>
+                            <div class="experience-desc">与师资、教务、研发等多个部门深度合作，建立高效的沟通机制和协作流程</div>
+                        </div>
+                        <div class="experience-item">
+                            <div class="experience-label">知识传承机制</div>
+                            <div class="experience-desc">通过技术分享和培训，确保团队技能持续提升，建立可持续的学习型组织</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="methodology-summary">
+                <div class="summary-header">
+                    <div class="summary-icon">🚀</div>
+                    <div class="summary-title">可复制的最佳实践</div>
+                </div>
+                <div class="summary-content">
+                    <div class="best-practice">
+                        <strong>标准化工作流：</strong>建立从需求分析到上线部署的完整项目管理模板，可复制应用于其他AI项目
+                    </div>
+                    <div class="best-practice">
+                        <strong>成本优化方法：</strong>建立供应商管理和技术选型的决策框架，持续降低运营成本
+                    </div>
+                    <div class="best-practice">
+                        <strong>质量保证机制：</strong>构建多轮验证和持续改进的质量管理体系，确保交付标准
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 幻灯片5: 团队协作与能力建设 -->
+    <div class="slide" id="slide4">
+        <div class="container">
+            <h2 class="page-title">团队协作与能力建设</h2>
+            
+            <div class="enhanced-stats-grid">
+                <div class="enhanced-stat-card">
+                    <div class="icon">🎓</div>
+                    <div class="number">2</div>
+                    <div class="label">混沌培训参与</div>
+                    <div class="description">积极参与企业培训，提升管理理念</div>
+                </div>
+                <div class="enhanced-stat-card">
+                    <div class="icon">🏆</div>
+                    <div class="number">1</div>
+                    <div class="label">最佳小组奖</div>
+                    <div class="description">团队协作与培训学习获得认可</div>
+                </div>
+                <div class="enhanced-stat-card">
+                    <div class="icon">🤝</div>
+                    <div class="number">4</div>
+                    <div class="label">跨部门协作</div>
+                    <div class="description">与师资、教务、研发等多部门深度配合</div>
+                </div>
+                <div class="enhanced-stat-card">
+                    <div class="icon">📈</div>
+                    <div class="number">100%</div>
+                    <div class="label">团队交付成功率</div>
+                    <div class="description">高效完成项目任务</div>
+                </div>
+            </div>
+
+            <div class="collaboration-grid">
+
+                <div class="collaboration-card">
+                    <div class="collaboration-header">
+                        <div class="collaboration-icon">🏢</div>
+                        <div class="collaboration-title">跨部门协作亮点</div>
+                    </div>
+                    <ul class="department-list">
+                        <li>
+                            <span class="dept-name">师资部</span>
+                            <span class="dept-project">AI课程报告分析项目，建立评估标准一致性</span>
+                        </li>
+                        <li>
+                            <span class="dept-name">教务部</span>
+                            <span class="dept-project">需求分析匹配系统，优化师生匹配流程</span>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="collaboration-card">
+                    <div class="collaboration-header">
+                        <div class="collaboration-icon">🎯</div>
+                        <div class="collaboration-title">成功案例：需求分析项目</div>
+                    </div>
+                    <div style="padding: 1rem 0;">
+                        <h4 style="color: #7b68ee; margin-bottom: 1rem;">项目背景</h4>
+                        <p style="color: #d0d0d0; margin-bottom: 1.5rem;">教务部门面临师生匹配过程中材料分析场景复杂、课号查询、主观性等问题，需要建立智能化的需求分析与匹配系统。</p>
+                        
+                        <h4 style="color: #7b68ee; margin-bottom: 1rem;">协作过程</h4>
+                        <ul style="color: #d0d0d0; line-height: 1.8;">
+                            <li>深入调研教务流程，识别痛点和需求</li>
+                            <li>与业务专家共同设计AI算法策略</li>
+                            <li>建立MVP系统并持续优化迭代</li>
+                            <li>培训业务人员使用新系统</li>
+                        </ul>
+        
+                    </div>
+                </div>
+
+                <div class="collaboration-card">
+                    <div class="collaboration-header">
+                        <div class="collaboration-icon">🚀</div>
+                        <div class="collaboration-title">个人能力提升</div>
+                    </div>
+                    <ul class="department-list">
+                        <li>
+                            <span class="dept-name">技术领导力</span>
+                            <span class="dept-project">从技术专家向技术管理者的成功转型</span>
+                        </li>
+                        <li>
+                            <span class="dept-name">业务理解</span>
+                            <span class="dept-project">深度理解教育行业业务逻辑和用户需求</span>
+                        </li>
+                        <li>
+                            <span class="dept-name">项目管理</span>
+                            <span class="dept-project">具备复杂项目的规划、协调和执行能力</span>
+                        </li>
+                        <li>
+                            <span class="dept-name">沟通协作</span>
+                            <span class="dept-project">优秀的跨部门沟通和团队协作能力</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 幻灯片6: 未来工作规划 -->
+    <div class="slide" id="slide5">
+        <div class="container">
+            <h2 class="page-title">未来工作规划</h2>
+            
+            <div class="planning-grid">
+                <div class="planning-card">
+                    <div class="planning-header">
+                        <div class="planning-icon">🚀</div>
+                        <div class="planning-title">技术创新方向</div>
+                    </div>
+                    <ul class="planning-items">
+                        <li>
+                            <div class="planning-item-title">多模态AI技术探索</div>
+                            <div class="planning-item-desc">深入研发视频生成技术，探索在教育场景中的创新应用，为用户提供更丰富的学习体验。</div>
+                        </li>
+                        <li>
+                            <div class="planning-item-title">数字人场景应用</div>
+                            <div class="planning-item-desc">开发虚拟导师和智能助教，实现7*24小时的个性化学习指导，提升教学覆盖率和体验质量。</div>
+                        </li>
+                        <li>
+                            <div class="planning-item-title">AI技术体系完善</div>
+                            <div class="planning-item-desc">基于已建立的技术骨架，继续完善全自研AI技术栈，提升系统稳定性和扩展性。</div>
+                        </li>
+                        <li>
+                            <div class="planning-item-title">边缘计算优化</div>
+                            <div class="planning-item-desc">探索AI模型轻量化和边缘部署，降低推理成本，提升响应速度。</div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="planning-card">
+                    <div class="planning-header">
+                        <div class="planning-icon">📈</div>
+                        <div class="planning-title">业务拓展规划</div>
+                    </div>
+                    <ul class="planning-items">
+                        <li>
+                            <div class="planning-item-title">销售场景深化</div>
+                            <div class="planning-item-desc">完善销售角色的AI需求分析功能，建立智能化的销售辅助工具链，提升转化率和客户满意度。</div>
+                        </li>
+                        <li>
+                            <div class="planning-item-title">用户价值创造升级</div>
+                            <div class="planning-item-desc">从解决基础业务需求升级为主动创造用户价值，通过AI洞察发现新的业务机会。</div>
+                        </li>
+                        <li>
+                            <div class="planning-item-title">智能化产品矩阵</div>
+                            <div class="planning-item-desc">构建完整的AI应用生态，覆盖教学、管理、服务等全业务流程。</div>
+                        </li>
+                        <li>
+                            <div class="planning-item-title">数据驱动决策</div>
+                            <div class="planning-item-desc">建立完善的数据分析体系，为业务决策提供AI驱动的洞察和建议。</div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="planning-card">
+                    <div class="planning-header">
+                        <div class="planning-icon">👨‍💼</div>
+                        <div class="planning-title">团队建设规划</div>
+                    </div>
+                    <ul class="planning-items">
+                        <li>
+                            <div class="planning-item-title">人才引进计划</div>
+                            <div class="planning-item-desc">计划补充1-2名技术人员，重点招聘多模态技术和产品化能力的专业人才。</div>
+                        </li>
+                        <li>
+                            <div class="planning-item-title">技能提升体系</div>
+                            <div class="planning-item-desc">建立系统性的技能培养计划，提升团队在前沿AI技术方面的整体实力。</div>
+                        </li>
+                        <li>
+                            <div class="planning-item-title">创新文化建设</div>
+                            <div class="planning-item-desc">营造开放创新的团队文化，鼓励技术探索和跨界合作。</div>
+                        </li>
+                        <li>
+                            <div class="planning-item-title">知识管理体系</div>
+                            <div class="planning-item-desc">建立技术知识库和最佳实践文档，促进团队知识共享和传承。</div>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+
+    
+        </div>
+    </div>
+
+    <!-- 幻灯片7: 总结与展望 -->
+    <div class="slide" id="slide6">
+        <div class="container">
+            <div class="summary-hero">
+                <div class="thank-you">
+                    ✨ 感谢观看 ✨
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 增强的导航 -->
+    <div class="enhanced-navigation">
+        <button class="nav-btn" onclick="previousSlide()" title="上一页">‹</button>
+        <div class="nav-dots">
+            <div class="nav-dot active" onclick="currentSlide(0)" title="标题页"></div>
+            <div class="nav-dot" onclick="currentSlide(1)" title="工作概览"></div>
+            <div class="nav-dot" onclick="currentSlide(2)" title="项目时间轴"></div>
+            <div class="nav-dot" onclick="currentSlide(3)" title="经验方法论"></div>
+            <div class="nav-dot" onclick="currentSlide(4)" title="团队协作"></div>
+            <div class="nav-dot" onclick="currentSlide(5)" title="未来规划"></div>
+            <div class="nav-dot" onclick="currentSlide(6)" title="总结"></div>
+        </div>
+        <button class="nav-btn" onclick="nextSlide()" title="下一页">›</button>
+        <div class="slide-counter">
+            <span id="currentSlideNum">1</span> / <span id="totalSlides">7</span>
+        </div>
+    </div>
+
+    <!-- 卡片详情弹窗 -->
+    <div class="card-detail-modal" id="cardDetailModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeCardModal()">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon" id="modalIcon">📅</div>
+                <div class="modal-title" id="modalTitle">详细信息</div>
+            </div>
+            <ul class="modal-detail-list" id="modalDetailList">
+                <!-- 详细信息将由JavaScript动态填充 -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
